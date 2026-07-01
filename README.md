@@ -1,2 +1,1 @@
-```crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/Baterskot-Prjkt/scripts/refs/heads/main/ok.sh | bash"
-```
+``` crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/Baterskot-Prjkt/scripts/refs/heads/main/ok.sh | bash" ```
