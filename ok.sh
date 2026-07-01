@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init source
-repo init -u https://github.com/Baterskot-Prjkt/android_manifest.git -b sixteen-qpr2 --git-lfs
+repo init -u https://github.com/Baterskot-Prjkt/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
 git clone https://github.com/Baterskot-Prjkt/local_manifest -b lineage-23.0-v .repo/local_manifests
 /opt/crave/resync.sh # crave repo sync
 
