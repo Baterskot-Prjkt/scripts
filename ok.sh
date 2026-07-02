@@ -1,10 +1,14 @@
 #!/bin/bash
 
 # init source
-repo init -u https://github.com/Baterskot-Prjkt/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
-git clone https://github.com/Baterskot-Prjkt/local_manifest -b lineage-23.0-v .repo/local_manifests
-/opt/crave/resync.sh # crave repo sync
+repo init --depth=1 -u https://github.com/Baterskot-Prjkt/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
+/opt/crave/resync.sh
 
+git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog -b lineage-23 device/xiaomi/fog
+git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog-kernel -b motregen device/xiaomi/fog-kernel
+git clone https://github.com/Baterskot-Prjkt/vendor_xiaomi_fog -b baklava-and-beyond vendor/xiaomi/fog 
+
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
 
 export BUILD_USERNAME=Dityay 
 export BUILD_HOSTNAME=crave 
@@ -18,5 +22,5 @@ m pixelos
 echo "Upload to gofile will be started..."
 if [ -f out/target/product/fog/*.zip ]; then
   wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-  chmod +x upload.sh ; ./upload.sh out/target/product/fog/202607.zip
+  chmod +x upload.sh ; ./upload.sh out/target/product/fog/*202607*.zip
 fi
