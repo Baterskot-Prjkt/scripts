@@ -4,7 +4,7 @@
 repo init --depth=1 -u https://github.com/Baterskot-Prjkt/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
 /opt/crave/resync.sh
 
-git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog -b lineage-23 device/xiaomi/fog
+git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog -b pixelos-16qpr2 device/xiaomi/fog
 git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog-kernel -b motregen device/xiaomi/fog-kernel
 git clone https://github.com/Baterskot-Prjkt/vendor_xiaomi_fog -b baklava-and-beyond vendor/xiaomi/fog 
 
