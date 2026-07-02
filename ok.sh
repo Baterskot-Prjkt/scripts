@@ -10,7 +10,7 @@ git clone https://github.com/Baterskot-Prjkt/vendor_xiaomi_fog -b baklava-and-be
 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
 
-export BUILD_USERNAME=Dityay 
+export BUILD_USERNAME=Butterscotch
 export BUILD_HOSTNAME=crave 
 
 # build start
