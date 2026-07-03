@@ -1,23 +1,25 @@
 #!/bin/bash
 
-# init source
+# Init Source
 repo init --depth=1 -u https://github.com/Baterskot-Prjkt/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
 /opt/crave/resync.sh
 
+# Clean up
 rm -rf device/xiaomi/fog
 rm -rf device/xiaomi/fog-kernel
 rm -rf vendor/xiaomi/fog
+rm -rf hardware/xiaomi
 
+# Device Specific
 git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog -b pixelos-16qpr2 device/xiaomi/fog
 git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog-kernel -b motregen device/xiaomi/fog-kernel
 git clone https://github.com/Baterskot-Prjkt/vendor_xiaomi_fog -b baklava-and-beyond vendor/xiaomi/fog 
-
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
 
 export BUILD_USERNAME=Butterscotch
 export BUILD_HOSTNAME=crave 
 
-# build start
+# Build
 . build/envsetup.sh
 breakfast fog
 m pixelos
