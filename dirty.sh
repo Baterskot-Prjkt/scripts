@@ -10,6 +10,7 @@ export BUILD_HOSTNAME=Heaven
 # Build
 . build/envsetup.sh
 breakfast fog
+make installclean
 m pixelos
 
 # Upload files to gofile
