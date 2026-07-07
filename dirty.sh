@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#fix
+rm -rf packages/apps/Settings
+git clone --depth=1 https://github.com/Baterskot-Prjkt/android_packages_apps_Settings packages/apps/Settings
+
 export BUILD_USERNAME=Butterscotch
 export BUILD_HOSTNAME=Heaven 
 
