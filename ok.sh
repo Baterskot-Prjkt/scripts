@@ -16,6 +16,7 @@ git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog.git -b pixelos-16
 git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog-kernel.git -b motregen device/xiaomi/fog-kernel
 git clone https://github.com/Baterskot-Prjkt/vendor_xiaomi_fog.git -b baklava-and-beyond vendor/xiaomi/fog 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
+git clone https://github.com/Baterskot-Prjkt/Heaven vendor/lineage-priv/keys
 
 export BUILD_USERNAME=Butterscotch
 export BUILD_HOSTNAME=Heaven 
@@ -28,7 +29,13 @@ m pixelos
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
-if [ -f out/target/product/fog/*.zip ]; then
-  wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-  chmod +x upload.sh ; ./upload.sh out/target/product/fog/*.zip
-fi
+
+wget -q https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
+chmod +x upload.sh
+
+for file in out/target/product/fog/*.zip; do
+  if [ -f "$file" ]; then
+    echo "Uploading: $file"
+    ./upload.sh "$file"
+  fi
+done
