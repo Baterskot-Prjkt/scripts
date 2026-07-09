@@ -15,7 +15,13 @@ m pixelos
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
-if [ -f out/target/product/fog/*.zip ]; then
-  wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-  chmod +x upload.sh ; ./upload.sh out/target/product/fog/*.zip
-fi
+
+wget -q https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
+chmod +x upload.sh
+
+for file in out/target/product/fog/*.zip; do
+  if [ -f "$file" ]; then
+    echo "Uploading: $file"
+    ./upload.sh "$file"
+  fi
+done
