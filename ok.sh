@@ -17,6 +17,7 @@ git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog-kernel.git -b mot
 git clone https://github.com/Baterskot-Prjkt/vendor_xiaomi_fog.git -b baklava-and-beyond vendor/xiaomi/fog 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
 git clone https://github.com/Baterskot-Prjkt/Heaven vendor/lineage-priv/keys
+git clone https://github.com/tranQuila-Project/vendor_lunaris_dolby vendor/lunaris/dolby
 
 export BUILD_USERNAME=Butterscotch
 export BUILD_HOSTNAME=Heaven 
