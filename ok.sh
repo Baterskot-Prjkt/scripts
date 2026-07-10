@@ -16,12 +16,9 @@ git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog.git -b pixelos-16
 git clone https://github.com/Baterskot-Prjkt/device_xiaomi_fog-kernel.git -b motregen device/xiaomi/fog-kernel
 git clone https://github.com/Baterskot-Prjkt/vendor_xiaomi_fog.git -b baklava-and-beyond vendor/xiaomi/fog 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
-git clone https://github.com/Baterskot-Prjkt/Heaven vendor/lineage-priv/keys
 
-# Clone DolbyAtmos
-rm -rf packages/apps/DolbyAtmos
-git clone https://github.com/swiitch-OFF-Lab/packages_apps_DolbyUI.git packages/apps/DolbyUI -b 16.0 --depth 1
-git clone https://github.com/swiitch-OFF-Lab/hardware_dolby.git hardware/dolby -b sony-1.5 --depth 1
+# Sign
+git clone https://github.com/Baterskot-Prjkt/Heaven vendor/lineage-priv/keys
 
 export BUILD_USERNAME=Butterscotch
 export BUILD_HOSTNAME=Heaven 
